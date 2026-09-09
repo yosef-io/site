@@ -1,0 +1,11 @@
+- category: "Hardware"
+  items:
+    - "Laptop"
+- category: "Software"
+  items:
+    - "Terminal"
+    - "Code editor"
+    - "Browser"
+- category: "Objects & Gear"
+  items:
+    - "Headphones"

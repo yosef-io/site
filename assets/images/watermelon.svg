@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+  <!-- Outer Rind -->
+  <path fill="#2e7d32" d="M34 2C34 19.673 19.673 34 2 34V2h32z"/>
+  <!-- Inner Rind -->
+  <path fill="#d8ebd6" d="M31 2C31 18.016 18.016 31 2 31V2h29z"/>
+  <!-- Flesh -->
+  <path fill="#e53935" d="M28 2C28 16.355 16.355 28 2 28V2h26z"/>
+  <!-- Seeds -->
+  <circle cx="10" cy="8" r="1.5" fill="#1a1a1a"/>
+  <circle cx="16" cy="8" r="1.5" fill="#1a1a1a"/>
+  <circle cx="8" cy="14" r="1.5" fill="#1a1a1a"/>
+  <circle cx="14" cy="14" r="1.5" fill="#1a1a1a"/>
+  <circle cx="20" cy="14" r="1.5" fill="#1a1a1a"/>
+  <circle cx="8" cy="20" r="1.5" fill="#1a1a1a"/>
+  <circle cx="14" cy="20" r="1.5" fill="#1a1a1a"/>
+</svg>

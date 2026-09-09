@@ -1,0 +1,64 @@
+---
+layout: default
+---
+<article class="single-post-view" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="post-navigation-bar">
+    <a href="{{ '/' | relative_url }}#writing" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+      <span>Back to Writing</span>
+    </a>
+  </div>
+
+  <header class="post-header">
+    <div class="post-meta-row">
+      <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date: "%B %d, %Y" }}</time>
+      <span class="meta-dot">·</span>
+      <span class="post-read-time">{{ page.read_time | default: "3 min read" }}</span>
+      {% if page.categories.size > 0 %}
+      <span class="meta-dot">·</span>
+      <span class="post-category-tag">{{ page.categories | first | capitalize }}</span>
+      {% endif %}
+    </div>
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    {% if page.excerpt %}
+    <p class="post-lead">{{ page.excerpt | strip_html }}</p>
+    {% endif %}
+    {% if page.image %}
+    <div class="post-hero-image-wrap">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}" class="post-hero-image" />
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="markdown-body post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    {% if page.tags.size > 0 %}
+    <div class="post-tags-list">
+      {% for tag in page.tags %}
+      <span class="post-tag">#{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="post-pagination">
+      {% if page.previous.url %}
+      <a class="pagination-link prev" href="{{ page.previous.url | relative_url }}">
+        <span class="pagination-label">← Older</span>
+        <span class="pagination-title">{{ page.previous.title }}</span>
+      </a>
+      {% endif %}
+      {% if page.next.url %}
+      <a class="pagination-link next" href="{{ page.next.url | relative_url }}">
+        <span class="pagination-label">Newer →</span>
+        <span class="pagination-title">{{ page.next.title }}</span>
+      </a>
+      {% endif %}
+    </div>
+  </footer>
+</article>

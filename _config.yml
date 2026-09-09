@@ -1,0 +1,40 @@
+title: Yosef.io
+tagline: /dev/null
+description: "Personal space."
+url: "https://yosef.io"
+baseurl: ""
+
+author:
+  name: Yosef
+  tagline: /dev/null
+  twitter: yosef_io
+  github: yosef-io
+  timezone: "Asia/Riyadh"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+permalink: /writing/:title/
+future: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - HOW_TO_POST.md
+
+plugins:
+  - webrick

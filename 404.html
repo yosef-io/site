@@ -1,0 +1,25 @@
+---
+layout: default
+title: "404: Page Not Found"
+permalink: /404.html
+---
+<div class="not-found-container">
+  <div class="hero-greeting">
+    <div class="brand-logo-watermelon" style="width: 54px; height: 54px; margin-bottom: 20px;">
+      {% include watermelon_icon.html %}
+    </div>
+    <h1 class="hero-title">404: /dev/null</h1>
+    <p class="hero-subtext">
+      The requested endpoint or memory address does not exist.
+    </p>
+  </div>
+
+  <div class="not-found-actions">
+    <a href="{{ '/' | relative_url }}#home" class="btn-primary">
+      <span>Return Home</span>
+    </a>
+    <button onclick="window.openCommandPalette()" class="btn-secondary">
+      <span>Open Command Palette (⌘K)</span>
+    </button>
+  </div>
+</div>

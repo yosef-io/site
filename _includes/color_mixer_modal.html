@@ -1,0 +1,71 @@
+<div id="color-mixer-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Color Mixer Studio">
+  <div class="modal-dialog color-mixer-dialog">
+    <div class="modal-header">
+      <div class="modal-header-titles">
+        <div class="mixer-title-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mixer-header-icon">
+            <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
+            <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
+            <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
+            <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
+            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+          </svg>
+          <h3 class="modal-title">Color Mixer Studio</h3>
+        </div>
+        <div class="article-modal-meta">Procedural palette generator & color mixer</div>
+      </div>
+      <div class="modal-header-actions">
+        <button class="modal-close-btn" aria-label="Close dialog">✕</button>
+      </div>
+    </div>
+
+    <div class="modal-body color-mixer-body">
+      <!-- Active Color Scheme -->
+      <div class="mixer-section">
+        <div class="mixer-section-header-row">
+          <span class="mixer-section-label">Active Color Scheme</span>
+          <span class="mixer-section-sub">6 Core Roles</span>
+        </div>
+        <div class="mixer-swatches-grid" id="mixer-swatches-list"></div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="mixer-actions-row">
+        <button id="mixer-randomize-btn" class="mixer-btn mixer-btn-primary" title="Generate random harmonic color mix (M)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+            <circle cx="8" cy="8" r="1.5" fill="currentColor"></circle>
+            <circle cx="16" cy="8" r="1.5" fill="currentColor"></circle>
+            <circle cx="12" cy="12" r="1.5" fill="currentColor"></circle>
+            <circle cx="8" cy="16" r="1.5" fill="currentColor"></circle>
+            <circle cx="16" cy="16" r="1.5" fill="currentColor"></circle>
+          </svg>
+          <span>Mix at Random</span>
+          <span class="shortcut-badge">M</span>
+        </button>
+
+        <button id="mixer-reset-btn" class="mixer-btn mixer-btn-secondary" title="Restore default palette">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="1 4 1 10 7 10"></polyline>
+            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+          </svg>
+          <span>Reset Default</span>
+        </button>
+
+        <button id="mixer-copy-btn" class="mixer-btn mixer-btn-secondary" title="Copy CSS variables to clipboard">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <span>Copy CSS</span>
+        </button>
+      </div>
+
+      <!-- Presets Gallery -->
+      <div class="mixer-section">
+        <div class="mixer-section-label">Curated Color Recipes</div>
+        <div class="mixer-presets-grid" id="mixer-presets-list"></div>
+      </div>
+    </div>
+  </div>
+</div>

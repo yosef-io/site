@@ -1,0 +1,15 @@
+- title: Home
+  id: home
+  url: "#home"
+  shortcut: "1"
+  icon: "home"
+- title: About
+  id: about
+  url: "#about"
+  shortcut: "2"
+  icon: "info"
+- title: Writing
+  id: writing
+  url: "#writing"
+  shortcut: "3"
+  icon: "writing"
